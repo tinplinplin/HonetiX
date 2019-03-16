@@ -1,8 +1,16 @@
 #!/bin/bash
 
 FILES=/data/*.xml
-for f in $FILES
-do
-    echo "Processing $f file..."
-    python /opt/VulntoES/VulntoES.py -i $f -e elasticsearch -r nmap -I nmap-vuln-to-es
+
+for F in $FILES; do
+    echo "Processing $F file..."
+    python VulntoES.py -i $F -e elasticsearch -r nmap -I nmap-vuln-to-es \
+    wait
+    #Checking if smb-vuln-ms17-010 has been reported:
+    if [ -n "$(cat $F | grep -i 'hostscript')" ]; then
+        xmlstarlet sel -t -m "//host/hostscript/script" -o "{'"protocol"':'tcp', '"scanner"':'nmap', '"service"':'smb', '"ip"':'" -v "ancestor::host/address[@addrtype='ipv4']/@addr" -o "', '"hostname"':'" -v "concat(ancestor::host/hostnames/hostname/@name,'')" -o "', '"port"':'445', '"state"':'open', '"scripts.vulners"':'" -v "@id" -o "'}" -n $F | sed "s/'/\"/g" > data.json && \
+        curl -s -X POST -H 'Content-Type: application/json' -d @data.json -v "elasticsearch:9200/nmap-vuln-to-es/vuln"
+    fi
 done
+
+exit

@@ -1,9 +1,10 @@
 FROM python:2.7-stretch
 
 RUN pip install --upgrade elasticsearch
+RUN apt-get -y update && apt-get -y install xmlstarlet
 
-ADD ./VulntoES.py /opt/VulntoES/
-ADD ingest /bin/ingest
+ADD ingest /bin/
+ADD VulntoES.py /opt/VulntoES/
 WORKDIR /opt/VulntoES
 
-CMD ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]

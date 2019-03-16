@@ -1,10 +1,10 @@
 {
-  "version": "6.6.0",
+  "version": "6.6.2",
   "objects": [
     {
       "id": "03f12650-8688-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.998Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Count by port number (top 50)",
@@ -20,7 +20,7 @@
     {
       "id": "7564b000-8687-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.996Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Port Numbers Distribution (top 100)",
@@ -36,7 +36,7 @@
     {
       "id": "9ab72c10-8688-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.505Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Count by service (top 50)",
@@ -52,7 +52,7 @@
     {
       "id": "65811f90-868a-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.514Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Tag Cloud (top 1000 services)",
@@ -68,7 +68,7 @@
     {
       "id": "d47a8c10-868a-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.994Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Full count of ports",
@@ -84,7 +84,7 @@
     {
       "id": "45db5ba0-868b-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.517Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Total Open Ports",
@@ -100,7 +100,7 @@
     {
       "id": "95ccc040-868b-11e8-aab9-2fc22f0c5406",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.509Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Total Live Hosts",
@@ -116,7 +116,7 @@
     {
       "id": "aecc5310-9a1f-11e8-94dd-f1f10a2241a0",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.511Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Tag Cloud (top 1000 products)",
@@ -132,7 +132,7 @@
     {
       "id": "1422ff00-9a27-11e8-94dd-f1f10a2241a0",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:44.506Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Full count of products",
@@ -148,7 +148,7 @@
     {
       "id": "7dc13c80-9a2a-11e8-94dd-f1f10a2241a0",
       "type": "visualization",
-      "updated_at": "2019-03-01T15:35:45.004Z",
+      "updated_at": "2019-03-15T15:52:26.142Z",
       "version": 1,
       "attributes": {
         "title": "Product version distribution",
@@ -162,25 +162,41 @@
       }
     },
     {
+      "id": "23cadd40-473f-11e9-aef2-b10e492bca6a",
+      "type": "visualization",
+      "updated_at": "2019-03-16T17:11:01.725Z",
+      "version": 2,
+      "attributes": {
+        "title": "Vulns",
+        "visState": "{\"title\":\"Vulns\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100,\"rotate\":90},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Unique count of scripts.vulners.keyword\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Unique count of scripts.vulners.keyword\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":false,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"scripts.vulners.keyword\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"ip.keyword\",\"size\":65535,\"order\":\"asc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"port.keyword\",\"size\":65535,\"order\":\"asc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"scripts.vulners.keyword\",\"size\":100,\"order\":\"asc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"dbe06400-3c35-11e9-bc34-2115bcebccd1\",\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[]}"
+        }
+      }
+    },
+    {
       "id": "dbe06400-3c35-11e9-bc34-2115bcebccd1",
       "type": "index-pattern",
-      "updated_at": "2019-03-01T15:22:44.503Z",
+      "updated_at": "2019-03-15T16:15:14.079Z",
       "version": 2,
       "attributes": {
         "title": "nmap*",
-        "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"hostname\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"hostname.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"ip\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"ip.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"port\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"port.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"product_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"product_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"protocol\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"protocol.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"scanner\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"scanner.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"service\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"service.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"state\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"state.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"time\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+        "fields": "[{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"hostname\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"hostname.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"ip\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"ip.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"port\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"port.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"product_name\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"product_name.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"product_version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"product_version.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"protocol\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"protocol.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"scanner\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"scanner.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"scripts.fingerprint-strings\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"scripts.fingerprint-strings.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"scripts.vulners\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"scripts.vulners.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"service\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"service.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"state\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"state.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"time\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
       }
     },
     {
       "id": "b317d5e0-868b-11e8-aab9-2fc22f0c5406",
       "type": "dashboard",
-      "updated_at": "2019-03-01T15:35:25.459Z",
-      "version": 1,
+      "updated_at": "2019-03-16T17:21:15.572Z",
+      "version": 3,
       "attributes": {
         "title": "Nmap Dashboard",
         "hits": 0,
         "description": "",
-        "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":71,\"w\":48,\"h\":12,\"i\":\"1\"},\"embeddableConfig\":{},\"id\":\"03f12650-8688-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":26,\"y\":23,\"w\":22,\"h\":15,\"i\":\"2\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"7564b000-8687-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":56,\"w\":48,\"h\":15,\"i\":\"3\"},\"embeddableConfig\":{},\"id\":\"9ab72c10-8688-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":8,\"w\":24,\"h\":15,\"i\":\"4\"},\"embeddableConfig\":{},\"id\":\"65811f90-868a-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":23,\"w\":13,\"h\":15,\"i\":\"5\"},\"embeddableConfig\":{},\"id\":\"d47a8c10-868a-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":8,\"i\":\"6\"},\"embeddableConfig\":{},\"id\":\"45db5ba0-868b-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":8,\"i\":\"7\"},\"embeddableConfig\":{},\"id\":\"95ccc040-868b-11e8-aab9-2fc22f0c5406\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":24,\"y\":8,\"w\":24,\"h\":15,\"i\":\"8\"},\"embeddableConfig\":{},\"id\":\"aecc5310-9a1f-11e8-94dd-f1f10a2241a0\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":13,\"y\":23,\"w\":13,\"h\":15,\"i\":\"9\"},\"embeddableConfig\":{},\"id\":\"1422ff00-9a27-11e8-94dd-f1f10a2241a0\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":0,\"y\":38,\"w\":48,\"h\":18,\"i\":\"10\"},\"embeddableConfig\":{},\"id\":\"7dc13c80-9a2a-11e8-94dd-f1f10a2241a0\",\"type\":\"visualization\",\"version\":\"6.3.0\"}]",
+        "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"1\",\"w\":48,\"x\":0,\"y\":71},\"id\":\"03f12650-8688-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{\"spy\":null},\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":22,\"x\":26,\"y\":23},\"id\":\"7564b000-8687-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":48,\"x\":0,\"y\":56},\"id\":\"9ab72c10-8688-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":0,\"y\":8},\"id\":\"65811f90-868a-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":13,\"x\":0,\"y\":23},\"id\":\"d47a8c10-868a-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"6\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"45db5ba0-868b-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":8,\"i\":\"7\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"95ccc040-868b-11e8-aab9-2fc22f0c5406\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":24,\"x\":24,\"y\":8},\"id\":\"aecc5310-9a1f-11e8-94dd-f1f10a2241a0\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"9\",\"w\":13,\"x\":13,\"y\":23},\"id\":\"1422ff00-9a27-11e8-94dd-f1f10a2241a0\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":18,\"i\":\"10\",\"w\":48,\"x\":0,\"y\":38},\"id\":\"7dc13c80-9a2a-11e8-94dd-f1f10a2241a0\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":15,\"i\":\"11\",\"w\":48,\"x\":0,\"y\":83},\"id\":\"23cadd40-473f-11e9-aef2-b10e492bca6a\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.6.2\"}]",
         "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
         "version": 1,
         "timeRestore": false,
